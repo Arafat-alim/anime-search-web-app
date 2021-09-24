@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/cyborg/bootstrap.min.css"
+    />
+    <!-- Mysheets -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <title>🔐 Login/Registration</title>
+  </head>
+  <body>
+    <div class="container" style="width: 25%; margin-top: 5%">
+      <form class="my-5 row mb-2" id="login-form" onsubmit="login()">
+        <legend class="text-center">Login/Registration</legend>
+        <h1 class="text-center">Anime Search</h1>
+        <fieldset>
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label mt-4"
+              >Email address</label
+            >
+            <input
+              autocomplete="off"
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We'll never share your email with anyone else.</small
+            >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="form-label mt-1"
+              >Password</label
+            >
+            <input
+              autocomplete="off"
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+            />
+          </div>
+          <div class="my-3">
+            <button
+              type="button"
+              class="btn btn-success my-1 form-control"
+              id="btnLog"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="btn btn-info form-control"
+              id="btnSign"
+            >
+              Register
+            </button>
+          </div>
+        </fieldset>
+      </form>
+      <p id="msg"></p>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- firebase  -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+    <script src="../js/firebaseLog.js"></script>
+    <script src="../js/regLogin.js"></script>
+  </body>
+</html>
