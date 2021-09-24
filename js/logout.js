@@ -18,4 +18,5 @@ logoutBtn.addEventListener("click", () => {
       // no error happend
       console.log(error.message);
     });
+  alert("SignOut Successfully");
 });

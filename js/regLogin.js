@@ -54,6 +54,7 @@ function signup() {
       });
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
+    alert("SignUp successfully");
   } else {
     alert("Input Field cant be an empty");
   }
