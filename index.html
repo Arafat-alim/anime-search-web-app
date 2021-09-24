@@ -22,58 +22,44 @@
     <title>🔐 Login/Registration</title>
   </head>
   <body>
-    <div class="container" style="width: 25%; margin-top: 5%">
-      <form class="my-5 row mb-2" id="login-form" onsubmit="login()">
-        <legend class="text-center">Login/Registration</legend>
+    <div class="mt-5">
+      <form style="max-width: 30%; margin: auto" id="login-form">
         <h1 class="text-center">Anime Search</h1>
-        <fieldset>
-          <div class="form-group">
-            <label for="exampleInputEmail1" class="form-label mt-4"
-              >Email address</label
-            >
-            <input
-              autocomplete="off"
-              type="email"
-              class="form-control"
-              id="email"
-              aria-describedby="emailHelp"
-              placeholder="Enter email"
-            />
-            <small id="emailHelp" class="form-text text-muted"
-              >We'll never share your email with anyone else.</small
-            >
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1" class="form-label mt-1"
-              >Password</label
-            >
-            <input
-              autocomplete="off"
-              type="password"
-              class="form-control"
-              id="password"
-              placeholder="Password"
-            />
-          </div>
-          <div class="my-3">
-            <button
-              type="button"
-              class="btn btn-success my-1 form-control"
-              id="btnLog"
-            >
-              Login
-            </button>
-            <button
-              type="button"
-              class="btn btn-info form-control"
-              id="btnSign"
-            >
-              Register
-            </button>
-          </div>
-        </fieldset>
+        <h3 class="h3 mb-3 text-center">Login/Registration</h3>
+        <label for="email" class="sr-only mb-1">Email</label>
+        <input
+          id="email"
+          autocomplete="off"
+          type="email"
+          autofocus
+          required
+          aria-describedby="emailHelp"
+          placeholder="Enter Your Email"
+          class="form-control mb-2"
+        />
+        <div class="mb-1">
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+        <label for="password" class="sr-only mb-1">Password</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Password"
+          class="form-control mb-3"
+        />
+
+        <div class="d-grid gap-2">
+          <button class="btn btn-md btn-success" id="btnLog" type="button">
+            Login
+          </button>
+          <button class="btn btn-md btn-info" id="btnSign" type="button">
+            Sign Up
+          </button>
+        </div>
+        <p class="mt-2 text-center" id="msg"></p>
       </form>
-      <p id="msg"></p>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
