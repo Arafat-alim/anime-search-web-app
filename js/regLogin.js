@@ -14,7 +14,7 @@ signUp.addEventListener("click", (e) => {
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    location.replace("../html/home.html");
+    location.replace("/anime-search-web-app/html/home.html");
   }
 });
 

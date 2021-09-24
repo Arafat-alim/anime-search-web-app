@@ -40,7 +40,7 @@ function animeSelected(id) {
   console.log(id);
   // pass data from one page to another usign sessionStorage
   sessionStorage.setItem("animeId", id);
-  window.location = "../html/anime.html";
+  window.location = "/anime-search-web-app/html/anime.html";
   return false;
 }
 
@@ -66,7 +66,7 @@ function getMovie() {
                   <li class="list-group py-2"><strong>Season Year:</strong>${movie.season_year} </li>
                   <li class="list-group py-2"><strong>No. of Episodes:</strong>${movie.episodes_count}</li>
                   <li class="list-group py-2"><a href="${movie.trailer_ur}" target="_blank" class="btn btn-primary">View Trailer</a></li>
-                  <li class="list-group py-2"><a href="../html/home.html" class="btn btn-warning">Go Back to Search</a></li>
+                  <li class="list-group py-2"><a href="/anime-search-web-app/html/home.html" class="btn btn-warning">Go Back to Search</a></li>
               </ul>
           </div>
         </div>

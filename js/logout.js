@@ -1,6 +1,6 @@
 firebase.auth().onAuthStateChanged((user) => {
   if (!user) {
-    location.replace("../index.html");
+    location.replace("/anime-search-web-app/index.html");
   } else {
     document.getElementById("Yemail").innerHTML = user.email;
   }
