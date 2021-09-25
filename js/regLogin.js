@@ -35,6 +35,7 @@ login.addEventListener("click", function () {
       });
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
+    document.getElementById("msg").innerText = "Please Wait ...";
   } else {
     alert("Input Field cant be an empty");
   }
@@ -54,6 +55,7 @@ function signup() {
       });
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
+    document.getElementById("msg").innerText = "Please Wait ...";
     alert("SignUp successfully");
   } else {
     alert("Input Field cant be an empty");

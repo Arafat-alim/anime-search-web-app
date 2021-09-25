@@ -9,6 +9,10 @@ p {
 }
 
 @media (min-width: 960px) {
+  #login-form {
+    max-width: 30%;
+    margin: auto;
+  }
   #movies .col-md-3 .well {
     height: 390px;
   }
