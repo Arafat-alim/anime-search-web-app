@@ -60,7 +60,7 @@ function getMovie() {
       console.log(movie);
       let output = `
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 my-2">
               <img src="${movie.cover_image}">
           </div>
           <div class="col-md-8">
