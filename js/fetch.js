@@ -20,7 +20,7 @@ function getAnime(text) {
       if (animes) {
         $.each(animes, (index, anime) => {
           output += `
-        <div class="col-md-3">
+        <div class="col-md-3 my-2">
           <div class="well text-center">
             <img src="${anime.cover_image}" />
             <h5>${anime.titles.en}</h5>
