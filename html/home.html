@@ -26,39 +26,53 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!--! navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/anime-search-web-app/html/home.html"
+        <a class="navbar-brand mx-3" href="/anime-search-web-app/html/home.html"
           >Anime Search</a
         >
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarColor02"
-          aria-controls="navbarColor02"
+          data-bs-target="#navbarColor01"
+          aria-controls="navbarColor01"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarColor02">
-          <ul class="navbar-nav me-auto"></ul>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link mx-3" href="./home.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-3" href="./feedback.html" active
+                >Feedback</a
+              >
+              <span class="visually-hidden">(current)</span>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link mx-3"
+                href="https://github.com/Arafat-alim/anime-search-web-app"
+                active
+                >Visit Github
+              </a>
+            </li>
+          </ul>
           <form class="d-flex">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <p class="m-3 mb-2">Your Email - <span id="Yemail"></span></p>
-              </li>
-              <li class="nav-item">
-                <button
-                  class="btn btn-secondary m-3 my-sm-0"
-                  type="submit"
-                  id="logbtn"
-                >
-                  Logout
-                </button>
-              </li>
-            </ul>
+            <p class="m-3 mb-2">Your Email: <span id="Yemail"></span></p>
+            <button
+              class="btn btn-danger my-2 my-sm-0"
+              id="logbtn"
+              type="submit"
+            >
+              Logout
+            </button>
           </form>
         </div>
       </div>
@@ -83,6 +97,15 @@
     <div class="container">
       <div id="movies" class="row"></div>
     </div>
+
+    <!--! FOOTER -->
+    <footer class="container my-5">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p id="footerId">
+        © 2021–2022 CodeBlooded, Inc. · <a href="#">Privacy</a> ·
+        <a href="#">Terms</a>
+      </p>
+    </footer>
 
     <!-- Adding Jquery CDN -->
     <script

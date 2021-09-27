@@ -14,9 +14,9 @@
     />
     <link
       rel="stylesheet"
-      href="https://bootswatch.com/5/cyborg/bootstrap.min.css"
+      href="https://bootswatch.com/5/lux/bootstrap.min.css"
     />
-    <!-- Mysheets -->
+    <!-- my sheets -->
     <link rel="stylesheet" href="../css/style.css" />
     <link
       rel="icon"
@@ -24,8 +24,12 @@
       sizes="32x32"
       href="../favicon/favicon-32x32.png"
     />
+
+    <title>Feedback Form</title>
   </head>
   <body>
+    <!-- Navbar -->
+
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
@@ -78,71 +82,89 @@
       </div>
     </nav>
 
-    <!-- container ALl My material -->
-    <div class="container">
-      <div id="movie" class="well"></div>
-    </div>
+    <div class="main">
+      <div class="container mt-5">
+        <form method="POST">
+          <fieldset>
+            <legend>Feedback Form</legend>
+            <div class="form-group">
+              <label for="firstName" class="form-label mt-4">First Name*</label>
+              <input
+                required
+                autocomplete="off"
+                type="text"
+                class="form-control"
+                id="fname"
+                aria-describedby="firstName"
+                placeholder="Enter First Name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="lastName" class="form-label mt-4">Last Name*</label>
+              <input
+                required
+                autocomplete="off"
+                type="text"
+                class="form-control"
+                id="lname"
+                aria-describedby="lastName"
+                placeholder="Enter Last Name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="form-label mt-4"
+                >Email address*</label
+              >
+              <input
+                required
+                autocomplete="off"
+                type="email"
+                class="form-control"
+                id="email"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
+              <small id="emailHelp" class="form-text text-muted"
+                >We'll never share your email with anyone else.</small
+              >
+            </div>
 
-    <!-- comment Box -->
-    <div class="container mb-4">
-      <h4 class="mt-3 border-bottom pb-2">Comments</h4>
-      <form id="comments">
-        <div className="mb-3">
-          <label class="form-label" for="name">Name</label>
-          <input
-            id="name"
-            name="name"
-            autocomplete="off"
-            class="form-control mb-2"
-          />
-        </div>
-        <div className="mb-3 ">
-          <label class="form-label" for="comment">Write a Comments</label>
-          <textarea id="comment" name="comment" class="form-control"></textarea>
-        </div>
-        <button class="btn btn-outline-primary mt-3">Post a Comment</button>
-      </form>
+            <div class="form-group">
+              <label for="message" class="form-label mt-4">Message*</label>
+              <textarea class="form-control" id="mesasge" rows="1"></textarea>
+            </div>
 
-      <!-- Fetching database -->
-      <div class="container" id="cont"></div>
-    </div>
+            <div class="form-group">
+              <label for="message" class="form-label mt-4"
+                >Additional Details</label
+              >
+              <textarea
+                autocomplete="off"
+                class="form-control"
+                id="extraDetail"
+                rows="2"
+              ></textarea>
+            </div>
 
-    <!--! FOOTER -->
-    <footer class="container my-5">
-      <p class="float-end"><a href="#">Back to top</a></p>
-      <p id="footerId">
-        © 2021–2022 CodeBlooded, Inc. · <a href="#">Privacy</a> ·
-        <a href="#">Terms</a>
-      </p>
-    </footer>
+            <button type="submit" class="btn btn-primary mt-3 mb-4" id="submit">
+              Submit
+            </button>
+          </fieldset>
+        </form>
+      </div>
 
-    <!-- !_____________ -->
-    <!-- Adding Jquery CDN -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
+      <!--! FOOTER -->
+      <footer class="container my-5">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p id="footerId">
+          © 2021–2022 CodeBlooded, Inc. · <a href="#">Privacy</a> ·
+          <a href="#">Terms</a>
+        </p>
+      </footer>
+    
 
-    <!-- Adding axios client -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
-    <script>
-      const firebaseConfig2 = {
-        apiKey: "AIzaSyCoORmNX4oHtpbDmtnw0qTvnrW_pDMzGn8",
-        authDomain: "commentbox-f9290.firebaseapp.com",
-        projectId: "commentbox-f9290",
-        storageBucket: "commentbox-f9290.appspot.com",
-        messagingSenderId: "713461755779",
-        appId: "1:713461755779:web:6c930ff79cc246731790b6",
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig2);
-      const db = firebase.firestore();
-    </script>
-
+    <!-- scripts  -->
+    <!--! Firebase -->
     <!-- firebase  -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
@@ -152,19 +174,19 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="../js/firebaseLog.js"></script>
+    <!-- Adding my script file -->
+    <script src="../js/logout.js"></script>
+    <script src="../js/fetch.js"></script>
+
+    <!-- -------------- -->
+    <!-- ! Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
-
-    <script src="../js/firebaseLog.js"></script>
-    <!-- Adding my script file -->
-    <script src="../js/logout.js"></script>
-    <script src="../js/fetch.js"></script>
-    <script>
-      getMovie();
-    </script>
+    <!--! My scripts -->
+    <script src="../js/feedback.js"></script>
   </body>
 </html>

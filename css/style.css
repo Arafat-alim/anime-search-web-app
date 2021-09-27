@@ -1,7 +1,9 @@
 p {
   color: yellow;
 }
-
+#footerId {
+  color: red;
+}
 #movies,
 #movie img {
   width: 100%;
@@ -13,11 +15,16 @@ p {
     max-width: 30%;
     margin: auto;
   }
+
   #movies .col-md-3 .well {
     height: 390px;
   }
 
   #movies .col-md-3 img {
     height: 240px;
+  }
+  .main {
+    max-width: 60%;
+    margin: auto;
   }
 }
