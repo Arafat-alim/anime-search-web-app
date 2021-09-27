@@ -16,9 +16,10 @@ function getAnime(text) {
       let animes = res.data.data.documents;
       console.log(animes);
       let output = "";
-
-      $.each(animes, (index, anime) => {
-        output += `
+      let message = "No Anime Found";
+      if (animes) {
+        $.each(animes, (index, anime) => {
+          output += `
         <div class="col-md-3">
           <div class="well text-center">
             <img src="${anime.cover_image}" />
@@ -28,8 +29,13 @@ function getAnime(text) {
           </div>
         </div>
         `;
-      });
-      $("#movies").html(output);
+        });
+
+        $("#movies").html(output);
+      } else {
+        // alert("No Anime Found");
+        $("#movies").html(message);
+      }
     })
     .catch((err) => {
       console.log(err);
